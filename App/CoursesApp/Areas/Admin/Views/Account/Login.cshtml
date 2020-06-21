@@ -1,0 +1,46 @@
+﻿@model CoursesApp.Areas.Admin.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Admin/Views/Shared/_OfflineLayout.cshtml";
+}
+<div class="card card-login mx-auto mt-5">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+
+            <div class="form-group">
+                <div class="form-label-group">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                    @Html.LabelFor(m => m.Email)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-label-group">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                    @Html.LabelFor(m => m.Password)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me">
+                        Remember Password
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        }
+        <div class="text-center">
+            <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+
+        @if(Model !=null && Model.Message != null)
+        {
+            <div class="alert alert-danger">
+                @Model.Message
+            </div>
+        }
+    </div>
+</div>
