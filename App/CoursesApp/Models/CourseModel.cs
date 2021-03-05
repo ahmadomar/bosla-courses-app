@@ -61,4 +61,13 @@ namespace CoursesApp.Models
         public SelectList Trainers { get; set; }
         public SelectList Categories { get; set; }
     }
+
+
+    public  class CourseUnitModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Course_Id { get; set; }
+        public string CourseName { get; set; }
+    }
 }

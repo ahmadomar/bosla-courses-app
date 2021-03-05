@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Dev\Bosla online\Courses\ASP.NET&MVC Project\Project\CoursesApp\CoursesApp\Data\CoursesEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Dev\Bosla online\Courses\ASP.NET&MVC Project\Project\courses-app\App\CoursesApp\Data\CoursesEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

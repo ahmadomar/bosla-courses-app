@@ -5,34 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e1688223c8764b5c8e3c0ac4341b9668" Name="Diagram1">
-        <EntityTypeShape EntityType="Courses_DBModel.Category" Width="1.5" PointX="0.75" PointY="3.125" />
-        <EntityTypeShape EntityType="Courses_DBModel.Class_Room_Comments" Width="1.5" PointX="5.25" PointY="23.75" />
-        <EntityTypeShape EntityType="Courses_DBModel.Class_Rooms" Width="1.5" PointX="5.25" PointY="17.125" />
-        <EntityTypeShape EntityType="Courses_DBModel.Course_Lessons" Width="1.5" PointX="5.25" PointY="14.375" />
-        <EntityTypeShape EntityType="Courses_DBModel.Course_Question_Types" Width="1.5" PointX="3" PointY="11.5" />
-        <EntityTypeShape EntityType="Courses_DBModel.Course_Questions" Width="1.5" PointX="5.25" PointY="7" />
-        <EntityTypeShape EntityType="Courses_DBModel.Course_Students" Width="1.5" PointX="5.25" PointY="10.25" />
-        <EntityTypeShape EntityType="Courses_DBModel.Cours" Width="1.5" PointX="3" PointY="6.375" />
-        <EntityTypeShape EntityType="Courses_DBModel.Question_Answers" Width="1.5" PointX="5.25" PointY="20.75" />
-        <EntityTypeShape EntityType="Courses_DBModel.Student" Width="1.5" PointX="3" PointY="14.75" />
-        <EntityTypeShape EntityType="Courses_DBModel.Trainee" Width="1.5" PointX="3" PointY="3" />
-        <EntityTypeShape EntityType="Courses_DBModel.Trainee_Courses" Width="1.5" PointX="5.25" PointY="4.25" />
-        <EntityTypeShape EntityType="Courses_DBModel.Trainer" Width="1.5" PointX="0.75" PointY="7" />
-        <EntityTypeShape EntityType="Courses_DBModel.User" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Courses_DBModel.Category" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="Courses_DBModel.Course_Lessons" Width="1.5" PointX="7.5" PointY="5.125" />
+        <EntityTypeShape EntityType="Courses_DBModel.Course_Units" Width="1.5" PointX="5.25" PointY="5.25" />
+        <EntityTypeShape EntityType="Courses_DBModel.Cours" Width="1.5" PointX="3" PointY="2" />
+        <EntityTypeShape EntityType="Courses_DBModel.Trainee" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="Courses_DBModel.Trainee_Courses" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="Courses_DBModel.Trainer" Width="1.5" PointX="0.75" PointY="2.375" />
         <AssociationConnector Association="Courses_DBModel.FK_Category_Category_Id" />
         <AssociationConnector Association="Courses_DBModel.FK_Course_Category_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Class_Room_Comments_Students_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Class_Rooms_Course_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Course_Lessons_Course_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Course_Questions_Course_Question_Types_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Course_Questions_Course_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Course_Students_Course_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Course_Students_Students_Id" />
+        <AssociationConnector Association="Courses_DBModel.FK_Course_Lessons_Unit_Id" />
+        <AssociationConnector Association="Courses_DBModel.FK_Course_Units_Courses_Id" />
         <AssociationConnector Association="Courses_DBModel.FK_Course_Trainer_Id" />
         <AssociationConnector Association="Courses_DBModel.FK_Trainee_Courses_Course_Id" />
-        <AssociationConnector Association="Courses_DBModel.FK_Question_Answers_Students_Id" />
         <AssociationConnector Association="Courses_DBModel.FK_Trainee_Courses_Trainee_Id" />
-        <EntityTypeShape EntityType="Courses_DBModel.Admin" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Courses_DBModel.Admin" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

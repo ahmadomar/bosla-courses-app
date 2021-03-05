@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CoursesApp.Data;
 using CoursesApp.Models;
+using Newtonsoft.Json.Serialization;
 
 namespace CoursesApp
 {
@@ -34,6 +35,12 @@ namespace CoursesApp
                    .ForMember(dst => dst.CourseId, src => src.MapFrom(c => c.Course_Id))
                    .ForMember(dst => dst.Registration_Date, src => src.MapFrom(c => c.Registration_Date))
                    .ForMember(dst => dst.Trainee, src => src.MapFrom(c => c.Trainee));
+
+
+                cfg.CreateMap<Course_Units, CourseUnitModel>()
+                    .ForMember(dst => dst.CourseName, src => src.MapFrom(c => c.Name))
+                    .ForMember(dst => dst.Name, src => src.MapFrom(c => c.Name))
+                 .ReverseMap();
 
             });
 

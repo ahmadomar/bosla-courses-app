@@ -26,19 +26,12 @@ namespace CoursesApp.Data
         }
     
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Class_Room_Comments> Class_Room_Comments { get; set; }
-        public virtual DbSet<Class_Rooms> Class_Rooms { get; set; }
         public virtual DbSet<Course_Lessons> Course_Lessons { get; set; }
-        public virtual DbSet<Course_Question_Types> Course_Question_Types { get; set; }
-        public virtual DbSet<Course_Questions> Course_Questions { get; set; }
-        public virtual DbSet<Course_Students> Course_Students { get; set; }
+        public virtual DbSet<Course_Units> Course_Units { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
-        public virtual DbSet<Question_Answers> Question_Answers { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Trainee> Trainees { get; set; }
         public virtual DbSet<Trainee_Courses> Trainee_Courses { get; set; }
         public virtual DbSet<Trainer> Trainers { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
     }
 }

@@ -12,18 +12,20 @@ namespace CoursesApp.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Course_Question_Types
+    public partial class Course_Units
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course_Question_Types()
+        public Course_Units()
         {
-            this.Course_Questions = new HashSet<Course_Questions>();
+            this.Course_Lessons = new HashSet<Course_Lessons>();
         }
     
-        public int Type_Id { get; set; }
-        public string Type { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Course_Id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course_Questions> Course_Questions { get; set; }
+        public virtual ICollection<Course_Lessons> Course_Lessons { get; set; }
+        public virtual Cours Cours { get; set; }
     }
 }

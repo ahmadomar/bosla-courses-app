@@ -161,6 +161,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -186,11 +188,13 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CourseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CourseUnitsController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\TraineeController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrainerController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Areas\Instructor\InstructorAreaRegistration.cs" />
+    <Compile Include="Common\SavingStatus.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -198,12 +202,6 @@
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Category.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Class_Rooms.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Class_Room_Comments.cs">
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Cours.cs">
@@ -228,19 +226,7 @@
     <Compile Include="Data\Course_Lessons.cs">
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Course_Questions.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Course_Question_Types.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Course_Students.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Question_Answers.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Student.cs">
+    <Compile Include="Data\Course_Units.cs">
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Trainee.cs">
@@ -250,9 +236,6 @@
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Trainer.cs">
-      <DependentUpon>CoursesEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\User.cs">
       <DependentUpon>CoursesEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -267,6 +250,7 @@
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\CourseUnitService.cs" />
     <Compile Include="Services\TraineeService.cs" />
     <Compile Include="Services\TraineeCourseService.cs" />
     <Compile Include="Services\TrainerService.cs" />
@@ -291,6 +275,7 @@
     <Content Include="Areas\Admin\Views\Course\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Course\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Trainee\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CourseUnits\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="scss\sb-admin.scss" />
     <Content Include="scss\_cards.scss" />

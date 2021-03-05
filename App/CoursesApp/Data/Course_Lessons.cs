@@ -14,11 +14,12 @@ namespace CoursesApp.Data
     
     public partial class Course_Lessons
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
-        public int Course_Id { get; set; }
         public Nullable<int> Order_Number { get; set; }
+        public int Unit_Id { get; set; }
+        public string Type { get; set; }
     
-        public virtual Cours Cours { get; set; }
+        public virtual Course_Units Course_Units { get; set; }
     }
 }

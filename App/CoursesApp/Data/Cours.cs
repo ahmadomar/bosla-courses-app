@@ -17,10 +17,7 @@ namespace CoursesApp.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cours()
         {
-            this.Class_Rooms = new HashSet<Class_Rooms>();
-            this.Course_Lessons = new HashSet<Course_Lessons>();
-            this.Course_Questions = new HashSet<Course_Questions>();
-            this.Course_Students = new HashSet<Course_Students>();
+            this.Course_Units = new HashSet<Course_Units>();
             this.Trainee_Courses = new HashSet<Trainee_Courses>();
         }
     
@@ -34,13 +31,7 @@ namespace CoursesApp.Data
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Class_Rooms> Class_Rooms { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course_Lessons> Course_Lessons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course_Questions> Course_Questions { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course_Students> Course_Students { get; set; }
+        public virtual ICollection<Course_Units> Course_Units { get; set; }
         public virtual Trainer Trainer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Trainee_Courses> Trainee_Courses { get; set; }
